@@ -1,0 +1,25 @@
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 以下是新增的
+# 忽略目录
+.vscode/
+node_modules
+packages/
+public/
+src/
+
+# 忽略指定文件
+index.html
+vite.config.js
+*.map
+.prettierrc
+.eslintrc.js
