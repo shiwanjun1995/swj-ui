@@ -1,6 +1,7 @@
 # Vue 3 + Vite
 
-This template should hsp get you started devsoping with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.<br>
+(此模板将帮助您开始开发Vite中的Vue3,它使用Vue3`<script setup>`单文件组件,点击此处[script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) 去了解更多)
 
 ## Recommended IDE Setup
 
@@ -163,6 +164,6 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 
 
 #### 坑
-* [vite] Internal server error: Missing "./dist/style.css" 
-  1.https://github.com/fatihsolhan/v-onboarding/issues/2
-  2.https://github.com/vitejs/vite/issues/6480 （wow, it was caused by vite's strict adherence to the exports field in the package.json, which css file does not exported.）
+[vite] Internal server error: Missing "./dist/style.css" 
+1.https://github.com/fatihsolhan/v-onboarding/issues/2<br>
+2.https://github.com/vitejs/vite/issues/6480 （wow, it was caused by vite's strict adherence to the exports field in the package.json, which css file does not exported.）
