@@ -161,9 +161,11 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 | loading     | 是否加载中状态   | boolean    | — | false   |
 | disabled  | 是否禁用状态    | boolean   | —   | false   |
 | icon  | 图标类名 | string   |  —  |  —  |
+| autofocus  | 是否默认聚焦 | boolean   |  —  |  false  |
+| native-type  | 原生 type 属性 | string   |  button / submit / reset  |  button  |
 
 
 #### 坑
-[vite] Internal server error: Missing "./dist/style.css" 
+[vite] Internal server error: Missing "./dist/style.css"<br>
 1.https://github.com/fatihsolhan/v-onboarding/issues/2<br>
 2.https://github.com/vitejs/vite/issues/6480 （wow, it was caused by vite's strict adherence to the exports field in the package.json, which css file does not exported.）

@@ -13,6 +13,8 @@
       's-button'
     ]"
     :disabled="disabled || loading"
+    :autofocus="autofocus"
+    :type="nativeType"
     @click="handleClick"
   >
     <!-- loading -->
@@ -49,6 +51,11 @@ const props = defineProps({
     default: '',
   },
   disabled: Boolean,
+  autofocus: Boolean,
+  nativeType: {
+    type: String,
+    default: 'button'
+  },
   size: String,
   loading: Boolean,
 });
