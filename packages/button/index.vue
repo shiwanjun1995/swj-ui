@@ -42,10 +42,13 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator: (value) =>
-      ['primary', 'success', 'warning', 'danger', 'info', 'text'].indexOf(
-        value
-      ) !== -1,
+    validator: function (value) {
+      return (
+        ['primary', 'success', 'warning', 'danger', 'info', 'text'].indexOf(
+          value
+        ) !== -1
+      )
+    },
   },
   plain: Boolean,
   round: Boolean,
