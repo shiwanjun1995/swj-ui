@@ -1,5 +1,5 @@
 <template>
-  <button 
+  <button
     :class="[
       type ? `s-button--${type}` : '',
       size ? `s-button--${size}` : '',
@@ -10,7 +10,7 @@
         'is-disabled': disabled,
         'is-loading': loading,
       },
-      's-button'
+      's-button',
     ]"
     :disabled="disabled || loading"
     :autofocus="autofocus"
@@ -31,8 +31,8 @@
   </button>
 </template>
 <script>
-  // 设置组件名字
-  export default { name: 'SButton' }
+// 设置组件名字
+export default { name: 'SButton' }
 </script>
 
 <script setup>
@@ -41,7 +41,11 @@ import { useSlots } from 'vue'
 const props = defineProps({
   type: {
     type: String,
-    default: 'default'
+    default: 'default',
+    validator: (value) =>
+      ['primary', 'success', 'warning', 'danger', 'info', 'text'].indexOf(
+        value
+      ) !== -1,
   },
   plain: Boolean,
   round: Boolean,
@@ -54,20 +58,20 @@ const props = defineProps({
   autofocus: Boolean,
   nativeType: {
     type: String,
-    default: 'button'
+    default: 'button',
   },
   size: String,
   loading: Boolean,
-});
+})
 // console.log(props.type);
 
 // https://github.com/ElemeFE/element/pull/10020
 
-const slots = useSlots();
+const slots = useSlots()
 // console.log(slots);
 
 // 在 <script setup> 中必须使用 defineProps 和 defineEmits API 来声明 props 和 emits ，它们具备完整的类型推断并且在 <script setup> 中是直接可用的：
-const emit = defineEmits(['click']);
+const emit = defineEmits(['click'])
 
 const handleClick = (evt) => {
   emit('click', evt)
@@ -243,7 +247,7 @@ const handleClick = (evt) => {
 }
 
 // 既有文字又有icon
-.s-button [class*="s-icon-"] + span {
+.s-button [class*='s-icon-'] + span {
   margin-left: 5px;
 }
 
@@ -337,7 +341,7 @@ const handleClick = (evt) => {
   pointer-events: none;
   &:before {
     pointer-events: none;
-    content: "";
+    content: '';
     position: absolute;
     left: -1px;
     top: -1px;
@@ -348,4 +352,3 @@ const handleClick = (evt) => {
   }
 }
 </style>
-
