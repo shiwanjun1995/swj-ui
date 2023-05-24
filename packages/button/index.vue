@@ -43,10 +43,17 @@ const props = defineProps({
     type: String,
     default: 'default',
     validator: function (value) {
+      // console.log(value)
       return (
-        ['primary', 'success', 'warning', 'danger', 'info', 'text'].indexOf(
-          value
-        ) !== -1
+        [
+          'default',
+          'primary',
+          'success',
+          'warning',
+          'danger',
+          'info',
+          'text',
+        ].indexOf(value) !== -1
       )
     },
   },
@@ -66,18 +73,19 @@ const props = defineProps({
   size: String,
   loading: Boolean,
 })
-// console.log(props.type);
+// console.log(props)
 
 // https://github.com/ElemeFE/element/pull/10020
 
 const slots = useSlots()
-// console.log(slots);
+// console.log(slots)
 
 // 在 <script setup> 中必须使用 defineProps 和 defineEmits API 来声明 props 和 emits ，它们具备完整的类型推断并且在 <script setup> 中是直接可用的：
 const emit = defineEmits(['click'])
 
 const handleClick = (evt) => {
   emit('click', evt)
+  debugger
 }
 </script>
 
