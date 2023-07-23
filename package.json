@@ -7,16 +7,19 @@
   },
   "license": "MIT",
   "files": [
-    "dist"
+    "lib"
   ],
-  "main": "./dist/swj-ui.umd.js",
-  "module": "./dist/swj-ui.es.js",
+  "main": "lib/swj-ui.umd.js",
+  "module": "lib/swj-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/swj-ui.es.js",
-      "require": "./dist/swj-ui.umd.js"
+      "import": "./lib/swj-ui.es.js",
+      "require": "./lib/swj-ui.umd.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./lib/style.css": {
+      "import": "./lib/style.css",
+      "require": "./lib/style.css"
+    }
   },
   "homepage": "https://github.com/shiwanjun1995/swj-ui#readme",
   "repository": {
