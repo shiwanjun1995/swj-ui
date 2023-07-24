@@ -43,7 +43,7 @@ const props = defineProps({
     type: String,
     default: 'default',
     validator: function (value) {
-      // console.log(value)
+      console.log(value)
       return (
         [
           'default',
