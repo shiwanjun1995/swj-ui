@@ -31,6 +31,7 @@
   </button>
 </template>
 <script>
+// https://github.com/vuejs/core/issues/7799
 // 设置组件名字
 export default { name: 'SButton' }
 </script>
@@ -43,7 +44,6 @@ const props = defineProps({
     type: String,
     default: 'default',
     validator: function (value) {
-      console.log(value)
       return (
         [
           'default',
@@ -85,7 +85,6 @@ const emit = defineEmits(['click'])
 
 const handleClick = (evt) => {
   emit('click', evt)
-  debugger
 }
 </script>
 
